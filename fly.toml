@@ -1,21 +1,21 @@
-# fly.toml app configuration file generated for nextchat-nieeda on 2025-02-17T12:41:36Z
+# fly.toml app configuration file generated for yumeng-chatgpt on 2025-02-17T13:51:07Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "yumeng-chatgpt"
-primary_region = "hkg"
-
-[env]
-  BASE_URL = "https://dzqc.link/"
+app = 'yumeng-chatgpt'
+primary_region = 'lax'
 
 [build]
 
 [http_service]
-  auto_start_machines = false
-  auto_stop_machines = "off"
+  internal_port = 3000
   force_https = true
-  internal_port = 3_000
+  auto_stop_machines = 'off'
+  auto_start_machines = true
+  
 [[vm]]
-  size = "shared-cpu-1x"
+  size = 'shared-cpu-1x'
+  cpu_kind = 'shared'
+  cpus = 1
   memory_mb = 256
