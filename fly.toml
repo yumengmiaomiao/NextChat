@@ -16,8 +16,6 @@ primary_region = "hkg"
   auto_stop_machines = "off"
   force_https = true
   internal_port = 3_000
-  processes = [ "app" ]
-
 [[vm]]
   size = "shared-cpu-1x"
   memory_mb = 256
